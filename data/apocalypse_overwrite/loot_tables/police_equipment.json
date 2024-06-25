@@ -46,12 +46,8 @@
           "type": "minecraft:item",
           "functions": [
             {
-              "components": {
-                "minecraft:potion_contents": {
-                  "potion": "minecraft:strong_slowness"
-                }
-              },
-              "function": "minecraft:set_components"
+              "function": "set_nbt",
+              "tag": "{Potion:\"minecraft:strong_slowness\"}"
             }
           ],
           "name": "minecraft:splash_potion"
@@ -101,7 +97,7 @@
     },
     {
       "rolls": 1,
-      "bonus_rolls": 1,
+      "bonus_rolls":1,
       "conditions": [
         {
           "condition": "random_chance",
@@ -113,18 +109,8 @@
           "type": "minecraft:item",
           "functions": [
             {
-              "components": {
-                "stored_enchantments": {
-                  "quick_charge": 5,
-                  "piercing": 10
-                }
-              },
-              "function": "minecraft:set_components"
-            },
-            {
-              "function": "set_name",
-              "target": "item_name",
-              "name": "Ultimate Crossbow"
+              "function": "set_nbt",
+              "tag": "{Enchantments: [{lvl: 5s, id: \"minecraft:quick_charge\"}, {lvl: 10s, id: \"minecraft:piercing\"}], display: {Lore: ['{\"text\":\"Not today zombies.\"}'], Name: '{\"text\":\"Ultimate Crossbow\", \"italic\":\"false\", \"color\":\"purple\"}'}}"
             }
           ],
           "name": "minecraft:crossbow"

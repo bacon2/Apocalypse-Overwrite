@@ -12,7 +12,7 @@ execute as @e[tag=move_me] at @s unless entity @p[distance=..15] run tag @s remo
 execute as @e[tag=move_me_underground] at @s unless entity @p[distance=..15] run tag @s remove move_me_underground
 execute if predicate apocalypse_overwrite:1_in_30 run function apocalypse_overwrite:random_tick
 execute as @a[nbt={SelectedItem:{id:"minecraft:rotten_flesh"}}, nbt={Inventory:[{id:"minecraft:rotten_flesh",Slot:-106b}]}] at @s run effect give @e[type=#apocalypse_overwrite:zombie_like, limit=1, sort=nearest] minecraft:weakness 1 0 true
-execute as @a[nbt={Inventory:[{Slot:102b, id:"minecraft:leather_chestplate",components:{"minecraft:custom_data":{"nbt":"body_odor"}}}]}] at @s run function apocalypse_overwrite:body_odor
+execute as @a[nbt={Inventory:[{Slot:102b, id:"minecraft:leather_chestplate",tag:{nbt:"body_odor"}}]}] at @s run function apocalypse_overwrite:body_odor
 execute at @e[type=minecart] if entity @p[distance=..1] run function apocalypse_overwrite:car
 #fireball crossbow
 #execute as @e[type=arrow] at @s unless entity @p[distance=..2, nbt={SelectedItem:{id:"minecraft:crossbow", tag:{display:{Name:'{"text":"Rocket Launcher", "italic":"false", "color":"red"}'}}}}] unless entity @e[distance=..2, nbt={HandItems:[{id:"minecraft:crossbow", tag:{display:{Name:'{"text":"Rocket Launcher", "italic":"false", "color":"red"}'}}}]}] run tag @s add notFireball
