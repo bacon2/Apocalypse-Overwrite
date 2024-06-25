@@ -9,6 +9,6 @@ execute as @e[tag=car] at @s if block ~ ~-0.4 ~ #apocalypse_overwrite:fluids run
 execute as @e[tag=car] at @s if block ~ ~-0.4 ~ #apocalypse_overwrite:fluids run tp @s ~ ~-0.4 ~
 execute as @e[tag=car] at @s if block ~ ~-0.4 ~ #apocalypse_overwrite:fluids run tp @s ~ ~-0.4 ~
 execute as @e[tag=car] at @s if block ~ ~-0.4 ~ #apocalypse_overwrite:fluids run tp @s ~ ~-0.4 ~
-execute as @a[nbt={Inventory:[{tag:{display:{Name:'{"text":"Gasoline", "italic":"false", "color":"gray"}'}}}]}] store success entity @e[type=minecart, limit=1, sort=nearest, distance=..1, tag=!car] Air int 1 run clear @s minecraft:black_dye{display:{Name:'{"text":"Gasoline", "italic":"false", "color":"gray"}'}} 1
+execute as @a[nbt={Inventory:[{components: {"minecraft:item_name": '{"color":"gray","text":"Gasoline"}'}, count: 1, id: "minecraft:black_dye"}]}] store success entity @e[type=minecart, limit=1, sort=nearest, distance=..1, tag=!car] Air int 1 run clear @s minecraft:black_dye[item_name='{"text":"Gasoline", "color":"gray"}'] 1
 tag @e[type=minecart, nbt={Air:1s}] add car
 tag @e[type=minecart, nbt={Air:0s}] remove car

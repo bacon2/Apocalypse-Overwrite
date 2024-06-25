@@ -191,7 +191,7 @@
           ],
           "type": "minecraft:loot_table",
           "weight": 1,
-          "value": "victordepths:food"
+          "value": "apocalypse_overwrite:food"
         }
       ]
     },
